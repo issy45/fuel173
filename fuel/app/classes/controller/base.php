@@ -12,16 +12,16 @@ class Controller_Base extends Controller_Template
 		// controllerとaction毎にcssとjsを自動読み込み
 		$controller = mb_strtolower(str_replace('Controller/', '', strtr(Request::main()->controller, '_', '/')));
 		$action     = Request::main()->action;
-		if (File::exists(DOCROOT.'assets/css/'.$controller.'.css')) {
+		if (File::exists(DOCROOT.'assets/css/tree/'.$controller.'.css')) {
 			Asset::css(array($controller.'.css'), array(), 'controller_style_css', false);
 		}
-		if (File::exists(DOCROOT.'assets/css/'.$controller.'/'.$action.'.css')) {
+		if (File::exists(DOCROOT.'assets/css/tree/'.$controller.'/'.$action.'.css')) {
 			Asset::css(array($controller.'/'.$action.'.css'), array(), 'action_style_css', false);
 		}
-		if (File::exists(DOCROOT.'assets/js/'.$controller.'.js')) {
+		if (File::exists(DOCROOT.'assets/js/tree/'.$controller.'.js')) {
 			Asset::js(array($controller.'.js'), array(), 'controller_script_js', false);
 		}
-		if (File::exists(DOCROOT.'assets/js/'.$controller.'/'.$action.'.js')) {
+		if (File::exists(DOCROOT.'assets/js/tree/'.$controller.'/'.$action.'.js')) {
 			Asset::js(array($controller.'/'.$action.'.js'), array(), 'action_script_js', false);
 		}
 	}
