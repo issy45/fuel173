@@ -11,12 +11,20 @@ class ComposerStaticInit41dc4c7623915e0fb45a58a63ebc8b2e
         array (
             'Fuel\\Upload\\' => 12,
         ),
+        'C' => 
+        array (
+            'Composer\\Installers\\' => 20,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
         'Fuel\\Upload\\' => 
         array (
             0 => __DIR__ . '/..' . '/fuelphp/upload/src',
+        ),
+        'Composer\\Installers\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/composer/installers/src/Composer/Installers',
         ),
     );
 
@@ -37,13 +45,6 @@ class ComposerStaticInit41dc4c7623915e0fb45a58a63ebc8b2e
             'Michelf' => 
             array (
                 0 => __DIR__ . '/..' . '/michelf/php-markdown',
-            ),
-        ),
-        'C' => 
-        array (
-            'Composer\\Installers\\' => 
-            array (
-                0 => __DIR__ . '/..' . '/composer/installers/src',
             ),
         ),
     );
